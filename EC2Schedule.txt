@@ -1,0 +1,32 @@
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 0until4 --begintime 0:00 --endtime 3:59
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 4until8 --begintime 4:00 --endtime 7:59
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 8until12 --begintime 8:00 --endtime 11:59
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 12until16 --begintime 12:00 --endtime 15:59
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 16until20 --begintime 16:00 --endtime 19:59
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 20until24 --begintime 20:00 --endtime 23:59
+
+scheduler-cli create-schedule --stack Ec2instanceScheduler --name 4hourrestart --region eu-central-1 --periods 0until4,4until8,8until12,12until16,16until20,20until24 --timezone Europe/Berlin
+
+scheduler-cli update-period --stack Ec2instanceScheduler --region eu-central-1 --name 0until4 --begintime 0:06 --endtime 3:49
+scheduler-cli update-period --stack Ec2instanceScheduler --region eu-central-1 --name 4until8 --begintime 4:06 --endtime 7:49
+scheduler-cli update-period --stack Ec2instanceScheduler --region eu-central-1 --name 8until12 --begintime 8:06 --endtime 11:49
+scheduler-cli update-period --stack Ec2instanceScheduler --region eu-central-1 --name 12until16 --begintime 12:06 --endtime 15:49
+scheduler-cli update-period --stack Ec2instanceScheduler --region eu-central-1 --name 16until20 --begintime 16:06 --endtime 19:49
+scheduler-cli update-period --stack Ec2instanceScheduler --region eu-central-1 --name 20until24 --begintime 20:06 --endtime 23:49
+
+
+
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 0until2 --begintime 0:06 --endtime 1:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 2until4 --begintime 2:06 --endtime 3:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 4until6 --begintime 4:06 --endtime 5:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 6until8 --begintime 6:06 --endtime 7:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 8until10 --begintime 8:06 --endtime 9:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 10until12 --begintime 10:06 --endtime 11:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 12until14 --begintime 12:06 --endtime 13:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 14until16 --begintime 14:06 --endtime 15:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 16until18 --begintime 16:06 --endtime 17:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 18until20 --begintime 18:06 --endtime 19:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 20until22 --begintime 20:06 --endtime 21:49
+scheduler-cli create-period --stack Ec2instanceScheduler --region eu-central-1 --name 22until24 --begintime 22:06 --endtime 23:49
+
+scheduler-cli create-schedule --stack Ec2instanceScheduler --name 2hourrestart --region eu-central-1 --periods 0until2,2until4,4until6,6until8,8until10,10until12,12until14,14until16,16until18,18until20,20until22,22until24 --timezone Europe/Berlin
